@@ -1,0 +1,12 @@
+*.gem
+*.rbc
+.DS_STORE
+*.swp
+*.rbc
+*.sass-cache
+/pkg
+/doc/api
+
+config/config_env.rb
+db/*.*
+.bundle/
