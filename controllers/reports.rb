@@ -8,7 +8,6 @@ class OpenKoreAPI < Sinatra::Base
       report = Report.where(username: data['username']).first
 
       if report.nil?
-        puts 'new'
         saved_account = Report.create(data)
       else
         # record already existed
