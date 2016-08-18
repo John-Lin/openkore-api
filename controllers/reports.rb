@@ -1,6 +1,5 @@
 # OpenKore Web Service
 class OpenKoreAPI < Sinatra::Base
-  # character information API
 
   post '/api/v1/create/account' do
     begin
