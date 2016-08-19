@@ -2,6 +2,7 @@
 class OpenKoreAPI < Sinatra::Base
 
   post '/api/v1/create/account' do
+    protected!
     begin
       data = JSON.parse(request.body.read)
       report = Report.where(username: data['username']).first
