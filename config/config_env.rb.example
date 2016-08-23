@@ -1,0 +1,7 @@
+# Copy this file to [app]/config/config_env.rb
+# Replace [*] with credentials/keys/etc.
+
+config_env :development, :test do
+  set 'USERNAME', "username"
+  set 'PASSWORD', "password"
+end
