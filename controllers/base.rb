@@ -1,6 +1,7 @@
 require 'sinatra'
 require 'json'
 require 'base64'
+require 'yaml'
 
 # OpenKore Web Service
 class OpenKoreAPI < Sinatra::Base
@@ -29,5 +30,11 @@ class OpenKoreAPI < Sinatra::Base
 
   get '/api/v1/?' do
     "Version 1.0 for our api"
+  end
+
+  get '/api/v1/version' do
+    yml_path = File.expand_path('../../config/version.yml', __FILE__)
+    config = YAML.load_file(yml_path)
+    config.to_json
   end
 end
